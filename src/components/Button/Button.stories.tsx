@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button from '../components/index';
-import { NativeButtonProps } from '../components/Button/button';
+import Button, { NativeButtonProps } from './button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -8,7 +7,7 @@ export default {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    //backgroundColor: { control: 'color' },
     type: {
       options: ['primary', 'default', 'danger', 'warnning'],
       control: { type: 'inline-radio' },
@@ -17,8 +16,15 @@ export default {
       options: ['sm', 'md', 'lg'],
       control: { type: 'inline-radio' }
     },
+    disabled: {
+      options: [true, false],
+      control: { type: 'inline-radio' }
+    },
+    icon: {
+      options: ['home', 'settings', 'search', 'loading'],
+      control: { type: 'select' }
+    },
     children: {
-      defaultValue: '测试',
       control: 'text',
     },
     onClick: { action: 'clicked' }
@@ -74,4 +80,18 @@ export const Small = Template.bind({});
 Small.args = {
   size: 'sm',
   children: 'Small',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  size: 'md',
+  children: 'Disabled',
+  disabled: true
+};
+
+export const IconBtn = Template.bind({});
+IconBtn.args = {
+  size: 'md',
+  children: 'IconBtn',
+  icon: 'home'
 };

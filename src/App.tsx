@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Icon from './components/Icon/icon';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      </header> */}
+      <Icon icon='home' size={100} color='orange' />
+      <Icon icon='settings' size={100} color='pink' />
     </div>
   );
 }

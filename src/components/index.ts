@@ -1,2 +1,7 @@
 import Button from "./Button/button";
-export default Button 
+import Icon from "./Icon/icon";
+
+export {
+    Button,
+    Icon
+}

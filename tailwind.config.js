@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       lineHeight: {
         '12': '3rem'
-      }
+      },
+    },
+    variants: {
+      opacity: ({ after }) => after(['disabled'])
     },
   },
   plugins: [],
