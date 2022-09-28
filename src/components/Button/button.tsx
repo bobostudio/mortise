@@ -17,7 +17,6 @@ interface BaseButtonProps {
 export type NativeButtonProps = BaseButtonProps & Omit<ButtonHTMLAttributes<HTMLElement>, 'type'>
 
 const Button: FC<NativeButtonProps> = (props) => {
-    console.log(props)
     const { className, disabled, size, type, icon, children, ...restProps } = props;
     const classes = classNames(BUTTON_BASE, className, {
         [`${BUTTON_PRIMARY}`]: type === 'primary',

@@ -12,6 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-error:before {
+  content: "\e631";
+}
+
 .icon-settings:before {
   content: "\e68a";
 }

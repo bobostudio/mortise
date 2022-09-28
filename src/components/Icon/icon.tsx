@@ -11,7 +11,7 @@ const Icon: FC<IconProps> = (props) => {
     let { icon, size, color } = props;
     return (
         <div><span className={`iconfont icon-${icon}`} style={{
-            fontSize: size ? size + 'px' : '60px',
+            fontSize: size ? size + 'px' : '20px',
             color
         }}></span></div>
     )

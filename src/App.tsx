@@ -1,5 +1,5 @@
 import './App.css';
-import Icon from './components/Icon/icon';
+import {Button} from './components/index';
 
 
 function App() {
@@ -8,8 +8,7 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header> */}
-      <Icon icon='home' size={100} color='orange' />
-      <Icon icon='settings' size={100} color='pink' />
+      <Button >测试</Button>
     </div>
   );
 }

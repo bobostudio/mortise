@@ -1,14 +1,15 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Icon } from '../index';
+import '../../index.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Example/Icon',
+    title: 'Components/Icon',
     component: Icon,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
         icon: {
-            options: ['home', 'settings', 'search', 'loading'],
+            options: ['home', 'settings', 'search', 'loading', 'error'],
             control: { type: 'inline-radio' }
         },
         size: {
@@ -29,16 +30,25 @@ Home.args = {
 
 export const Settings = Template.bind({});
 Settings.args = {
-    icon: 'settings'
+    icon: 'settings',
+    size: 60
 };
 
 
 export const Search = Template.bind({});
 Search.args = {
-    icon: 'search'
+    icon: 'search',
+    size: 60
 };
 
 export const Loading = Template.bind({});
 Loading.args = {
     icon: 'loading',
+    size: 60
+};
+
+export const Error = Template.bind({});
+Error.args = {
+    icon: 'error',
+    size: 60
 };
