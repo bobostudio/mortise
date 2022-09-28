@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react'
-import { Alert } from '../index'
+import Alert from './index';
 
 describe(`检测 Alert 组件`, () => {
     it(`检测【 content 】`, () => {

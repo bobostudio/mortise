@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Alert } from '../index';
+import Alert from './index';
 import '../../index.css';
 
 

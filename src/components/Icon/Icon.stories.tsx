@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Icon } from '../index';
+import Icon from './index';
 import '../../index.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

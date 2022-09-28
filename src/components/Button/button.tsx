@@ -1,7 +1,8 @@
+import React from 'react'
 import classNames from 'classnames'
 import { ReactNode, FC, ButtonHTMLAttributes } from "react";
-import { Icon } from '../index';
-import { BUTTON_BASE, BUTTON_PRIMARY, BUTTON_DEFAULT, BUTTON_DANDER, BUTTON_WARNNING, BUTTON_LG, BUTTON_MD, BUTTON_SM, BUTTON_DISABLED } from './style';
+import Icon from '../Icon';
+import './style.css';
 export type ButtonSize = 'lg' | 'md' | 'sm';
 export type ButtonType = 'primary' | 'default' | 'danger' | 'warnning'
 
@@ -18,15 +19,15 @@ export type NativeButtonProps = BaseButtonProps & Omit<ButtonHTMLAttributes<HTML
 
 const Button: FC<NativeButtonProps> = (props) => {
     const { className, disabled, size, type, icon, children, ...restProps } = props;
-    const classes = classNames(BUTTON_BASE, className, {
-        [`${BUTTON_PRIMARY}`]: type === 'primary',
-        [`${BUTTON_DEFAULT}`]: type === 'default',
-        [`${BUTTON_DANDER}`]: type === 'danger',
-        [`${BUTTON_WARNNING}`]: type === 'warnning',
-        [`${BUTTON_LG}`]: size === 'lg',
-        [`${BUTTON_MD}`]: size === 'md',
-        [`${BUTTON_SM}`]: size === 'sm',
-        [`${BUTTON_DISABLED}`]: disabled === true
+    const classes = classNames(`base`, className, {
+        ['primary']: type === 'primary',
+        [`default`]: type === 'default',
+        [`danger`]: type === 'danger',
+        [`warnning`]: type === 'warnning',
+        [`lg`]: size === 'lg',
+        [`md`]: size === 'md',
+        [`sm`]: size === 'sm',
+        [`disabled`]: disabled === true
     })
     return (
         <button className={classes} {...restProps} disabled={disabled}>

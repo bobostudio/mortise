@@ -1,0 +1,53 @@
+.base {
+    @apply flex flex-row items-center justify-around px-12 text-center text-white rounded cursor-pointer;
+}
+
+.primary {
+    @apply bg-blue-400;
+}
+
+.primary:hover {
+    @apply bg-blue-500;
+}
+
+.default {
+    @apply bg-gray-400;
+}
+
+.default:hover {
+    @apply bg-gray-500;
+}
+
+.danger {
+    @apply bg-red-400;
+}
+
+.danger:hover {
+    @apply bg-red-500;
+}
+
+
+.warnning {
+    @apply bg-orange-400;
+}
+
+.warnning:hover {
+    @apply bg-orange-500;
+}
+
+.lg {
+    @apply w-24 h-12 leading-12 text-lg;
+}
+
+.md {
+    @apply w-20 h-10 leading-10 text-base;
+}
+
+.sm {
+    @apply w-10 h-6 leading-6 text-xs px-8;
+}
+
+
+.disable {
+    @apply opacity-50 cursor-no-drop !important;
+}

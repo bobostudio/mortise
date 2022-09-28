@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import  { NativeButtonProps } from './button';
-import {Button} from '../index';
+import { NativeButtonProps } from './button';
+import Button from './index';
 import '../../index.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

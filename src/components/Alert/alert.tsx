@@ -1,7 +1,8 @@
+import React from 'react'
 import classNames from "classnames";
 import { CSSProperties, FC, useState } from "react";
 import { ALERT_BASE, ALERT_DANDER, ALERT_DEFAULT, ALERT_PRIMARY, ALERT_WARNNING } from "./style";
-import { Icon } from '../index';
+import Icon from '../Icon';
 
 export type AlertType = 'primary' | 'default' | 'danger' | 'warnning'
 
