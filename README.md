@@ -28,3 +28,4 @@ Launches the test runner in the interactive watch mode.
 - [ ] Input Component
 - [ ] Select Component
 - [ ] Upload Component
+- [ ] Progress Component

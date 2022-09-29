@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Alert from './index';
 import '../../index.css';
 
-
 export default {
     title: 'Components/Alert',
     component: Alert,

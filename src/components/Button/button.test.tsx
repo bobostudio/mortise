@@ -11,7 +11,7 @@ describe(`检测 Button 组件`, () => {
         const element = wrapper.getByText('primary').parentNode as HTMLButtonElement;
         expect(element).toBeInTheDocument();
         expect(element.tagName).toEqual('BUTTON');
-        expect(element).toHaveClass('bg-blue-400 hover:bg-blue-500');
+        expect(element).toHaveClass('button primary md');
     })
     it(`检测【 disabled 】`, () => {
         const wrapper = render(<Button {...defaultClick} type='primary' disabled>disabled</Button>);
@@ -23,11 +23,11 @@ describe(`检测 Button 组件`, () => {
     it(`检测【 lg 】`, () => {
         const wrapper = render(<Button {...defaultClick} type='primary' size='lg'>lg</Button>);
         const element = wrapper.getByText('lg').parentNode as HTMLButtonElement;
-        expect(element).toHaveClass('w-24 h-12 leading-12 text-lg');
+        expect(element).toHaveClass('button primary lg');
     })
     it(`检测【 danger 】`, () => {
         const wrapper = render(<Button {...defaultClick} type='danger' size='lg'>danger</Button>);
         const element = wrapper.getByText('danger').parentNode as HTMLButtonElement;
-        expect(element).toHaveClass('bg-red-400 hover:bg-red-500');
+        expect(element).toHaveClass('button danger lg');
     })
 });

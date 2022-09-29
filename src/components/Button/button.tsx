@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import { ReactNode, FC, ButtonHTMLAttributes } from "react";
 import Icon from '../Icon';
-import './style.css';
 export type ButtonSize = 'lg' | 'md' | 'sm';
 export type ButtonType = 'primary' | 'default' | 'danger' | 'warnning'
 
@@ -19,7 +18,7 @@ export type NativeButtonProps = BaseButtonProps & Omit<ButtonHTMLAttributes<HTML
 
 const Button: FC<NativeButtonProps> = (props) => {
     const { className, disabled, size, type, icon, children, ...restProps } = props;
-    const classes = classNames(`base`, className, {
+    const classes = classNames(`button`, className, {
         ['primary']: type === 'primary',
         [`default`]: type === 'default',
         [`danger`]: type === 'danger',
@@ -30,8 +29,8 @@ const Button: FC<NativeButtonProps> = (props) => {
         [`disabled`]: disabled === true
     })
     return (
-        <button className={classes} {...restProps} disabled={disabled}>
-            {icon ? <Icon icon={icon} /> : <></>} <span style={{ marginLeft: '4px' }}>{children}</span>
+        <button type="button" className={classes} {...restProps} disabled={disabled}>
+            {icon ? <Icon icon={icon} /> : <></>} {children}
         </button>
     )
 }

@@ -1,7 +1,5 @@
-import React from 'react'
 import classNames from "classnames";
-import { CSSProperties, FC, useState } from "react";
-import { ALERT_BASE, ALERT_DANDER, ALERT_DEFAULT, ALERT_PRIMARY, ALERT_WARNNING } from "./style";
+import React, { FC, useState } from "react";
 import Icon from '../Icon';
 
 export type AlertType = 'primary' | 'default' | 'danger' | 'warnning'
@@ -16,13 +14,13 @@ interface AlertProps {
 }
 
 const Alert: FC<AlertProps> = (props) => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState<boolean>(false);
     const { className, title, content, type, icon, closed } = props;
-    const classes = classNames(ALERT_BASE, className, {
-        [`${ALERT_PRIMARY}`]: type === 'primary',
-        [`${ALERT_DEFAULT}`]: type === 'default',
-        [`${ALERT_DANDER}`]: type === 'danger',
-        [`${ALERT_WARNNING}`]: type === 'warnning',
+    const classes = classNames(`alert`, className, {
+        [`primary`]: type === 'primary',
+        [`default`]: type === 'default',
+        [`danger`]: type === 'danger',
+        [`warnning`]: type === 'warnning',
     })
     return (
         <>

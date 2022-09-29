@@ -1,6 +1,57 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "../node_modules/tailwindcss/base.css";
+@import "../node_modules/tailwindcss/components.css";
+@import "../node_modules/tailwindcss/utilities.css";
 
 @import "./components/Button/style.css";
-@import "./components/Icon/iconfont.css";
+@import "./components/Icon/style.css";
+@import "./components/Alert/style.css";
+
+.primary {
+    @apply bg-blue-400;
+}
+
+.primary:hover {
+    @apply bg-blue-500;
+}
+
+.default {
+    @apply bg-gray-400;
+}
+
+.default:hover {
+    @apply bg-gray-500;
+}
+
+.danger {
+    @apply bg-red-400;
+}
+
+.danger:hover {
+    @apply bg-red-500;
+}
+
+
+.warnning {
+    @apply bg-orange-400;
+}
+
+.warnning:hover {
+    @apply bg-orange-500;
+}
+
+.lg {
+    @apply w-60 h-12 leading-12 text-lg;
+}
+
+.md {
+    @apply w-40 h-10 leading-10 text-base;
+}
+
+.sm {
+    @apply w-10 h-6 leading-6 text-xs px-8;
+}
+
+
+.disable {
+    @apply opacity-50 cursor-no-drop;
+}

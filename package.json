@@ -1,6 +1,11 @@
 {
   "name": "mortise",
   "version": "0.0.1",
+  "private": "true",
+  "author": "bobostudio",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -8,11 +13,9 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.59",
-    "@types/react": "^18.0.20",
+    "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "classnames": "^2.3.2",
-    "node-sass": "^7.0.3",
-    "postcss-cachebuster": "^0.1.6",
     "postcss-import": "^15.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,7 +33,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/index.css ./dist/index.css"
+    "build-css": "npx tailwindcss -i ./src/index.css -o ./dist/index.css"
   },
   "eslintConfig": {
     "extends": [

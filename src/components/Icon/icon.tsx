@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import './iconfont.css';
 
 export interface IconProps {
     icon: string,
