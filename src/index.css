@@ -6,6 +6,12 @@
 @import "./components/Icon/style.css";
 @import "./components/Alert/style.css";
 
+@font-face {
+    font-family: "iconfont";
+    src: url('../public/fonts/iconfont.ttf') format('truetype');
+}
+
+
 .primary {
     @apply bg-blue-400;
 }
@@ -40,11 +46,11 @@
 }
 
 .lg {
-    @apply w-60 h-12 leading-12 text-lg;
+    @apply w-40 h-12 leading-12 text-lg;
 }
 
 .md {
-    @apply w-40 h-10 leading-10 text-base;
+    @apply w-20 h-10 leading-10 text-base;
 }
 
 .sm {

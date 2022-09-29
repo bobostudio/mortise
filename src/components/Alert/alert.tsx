@@ -14,7 +14,6 @@ interface AlertProps {
 }
 
 const Alert: FC<AlertProps> = (props) => {
-    const [show, setShow] = useState<boolean>(false);
     const { className, title, content, type, icon, closed } = props;
     const classes = classNames(`alert`, className, {
         [`primary`]: type === 'primary',
@@ -22,27 +21,28 @@ const Alert: FC<AlertProps> = (props) => {
         [`danger`]: type === 'danger',
         [`warnning`]: type === 'warnning',
     })
+    const [showClose, setShowClose] = useState<boolean>(false);
     return (
         <>
             {
-                !show ? <div className={classes}>
+                !showClose ? <div className={classes}>
                     {
                         title && <div className="text-xl">
                             {title}</div>
                     }
-                    <span className="flex">
+                    <div className="flex">
                         {
-                            icon && !title && <span className="mr-2 cursor-pointer"><Icon icon={icon} /></span>
+                            icon && !title && <div className="mr-2 cursor-pointer"><Icon icon={icon} /></div>
                         }
                         <div className="flex flex-row justify-between items-center w-full">
                             {content}
                             {
-                                closed && !title && <span className="mr-2 cursor-pointer" onClick={() => {
-                                    setShow(!show)
-                                }}><Icon icon="error" color="white" size={10} /></span>
+                                closed && !title && <div className="mr-2 cursor-pointer" onClick={() => {
+                                    setShowClose(!showClose)
+                                }}><Icon icon="error" color="white" size={10} /></div>
                             }
                         </div>
-                    </span>
+                    </div>
                 </div> :
                     <></>
             }

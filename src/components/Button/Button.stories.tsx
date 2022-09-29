@@ -13,18 +13,26 @@ export default {
     type: {
       options: ['primary', 'default', 'danger', 'warnning'],
       control: { type: 'inline-radio' },
+      defaultValue: 'primary',
+      description: 'type of button'
     },
     size: {
       options: ['sm', 'md', 'lg'],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
+      defaultValue: 'md',
+      description: 'size of button'
     },
     disabled: {
       options: [true, false],
-      control: { type: 'inline-radio' }
+      control: { type: 'inline-radio' },
+      defaultValue: false,
+      description: 'disabled of button'
     },
     icon: {
       options: ['home', 'settings', 'search', 'loading'],
-      control: { type: 'select' }
+      control: { type: 'select' },
+      defaultValue: 'home',
+      description: 'icon of button'
     },
     children: {
       control: 'text',
